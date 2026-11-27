@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>BenWar</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <canvas id="game"></canvas>
+
+        <!-- Barres de vie -->
+        <div id="hud">
+            <div class="panel p1">
+                <div class="head">
+                    <span class="name">Joueur 1</span>
+                    <span class="hpText" id="hpText1">100</span>
+                </div>
+                <div class="bar"><div class="fill ok" id="hp1"></div></div>
+            </div>
+            <div class="panel p2">
+                <div class="head">
+                    <span class="hpText" id="hpText2">100</span>
+                    <span class="name" id="name2">Joueur 2</span>
+                </div>
+                <div class="bar"><div class="fill ok" id="hp2"></div></div>
+            </div>
+        </div>
+
+        <!-- Aide des touches -->
+        <div id="help">
+            <span><b>J1</b> ZQSD (WASD) pour bouger, souris pour viser, clic ou Espace pour tirer</span>
+            <span><b>J2</b> flèches pour bouger, K / L pour tourner, Entrée pour tirer</span>
+            <span><b>B</b> jouer contre un bot &nbsp; <b>R</b> rejouer</span>
+        </div>
+
+        <!-- Message de fin de partie -->
+        <div id="banner" hidden>
+            <div class="title" id="bannerTitle"></div>
+            <div class="sub">Appuie sur R pour rejouer</div>
+        </div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+        <script src="character.js"></script>
+        <script src="bullet.js"></script>
+        <script src="obstacle.js"></script>
+        <script src="player.js"></script>
+        <script src="map.js"></script>
+        <script src="game.js"></script>
+    </body>
+</html>
